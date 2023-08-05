@@ -1,0 +1,245 @@
+:root {
+  /* colores principales y sus complementarios */
+  --color-principal-1: #e6b120;
+  --color-complementario-principal_1-1: rgb(25, 78, 223);
+  --color-complementario-principal_1-2: rgb(223, 25, 101);
+  --color-complementario-principal_1-3: rgb(25, 223, 152);
+  --color-principal-2: #63155C;
+  --color-complementario-principal_2-1: rgb(156, 234, 163);
+  --color-complementario-principal_2-2: rgb(163, 234, 199);
+  --color-complementario-principal_2-3: #eaa319;
+  /* colores normales */
+  --color-0: inherit;
+  --color-1: #141313;
+  --color-2: #747474;
+  --color-3: #8f0432;
+  --color-4: #000;
+  --color-5: #ffffff66;
+  --color-6: #151515;
+  --color-7: #555555;
+  --color-8: #ffffff;
+  --color-9: #ee82ee;
+  --color-10: #ffffff80;
+}
+
+/* Estilos de fuentes */
+@font-face {
+  font-family: 'Inconsolata';
+  src: url(../fonts/inconsolata.ttf);
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url(../fonts/poppins-Bold.ttf);
+}
+
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inconsolata';
+  /* background-image: url("../img/—Pngtree—dark\ wooden\ panel\ background\ with_1159330.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; */
+  background-color: var(--color-principal-2) !important;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+  background: var(--color-principal-2);
+  border: var(--color-principal-1);
+}
+
+/* Estilos para imágenes */
+img {
+  display: block;
+  width: 100%;
+}
+
+/* Estilos para títulos */
+h2 {
+  display: block;
+  font-size: 1.5em;
+  /* margin-block-start: 0.83em;
+  margin-block-end: 0.83em; */
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.main-title {
+  font-family: 'poppins';
+  font-size: 2em;
+  color: #efb810;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Estilos para sección de testimonios */
+.container_testimonials {
+  text-align: center;
+  background: var(--color-principal-1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.testimonials_txt {
+  color: var(--color-3);
+}
+
+/* Estilos para sección de editores */
+.container-editor {
+  margin-top: 20px;
+}
+
+.editor_item {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.editor_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.editor_circle {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -200px;
+  right: -150px;
+  color: #000;
+  padding: 20px;
+  padding-bottom: 70px;
+  padding-right: 50px;
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+.editor_item:hover .editor_circle {
+  bottom: -90px;
+  right: -50px;
+  transform: scale(1.2);
+}
+
+.editor_item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-5);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.editor_item:hover:before {
+  opacity: 1;
+}
+
+/* Estilos para sección de consejos */
+.container-tips {
+  text-align: center;
+  background: var(--color-2);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.container-tips p {
+  color: #fff;
+}
+
+/* Estilos para botones */
+.btn_shop {
+  display: block;
+  border: 1px solid var(--color-4);
+  color: var(--color-4);
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 150px;
+  margin: 20px auto;
+}
+
+/* Estilos para el pie de página */
+.main-footer {
+  background: var(--color-6);
+  color: var(--color-8);
+  padding: 30px;
+  margin: 0px 10px 0px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.footer_links a {
+  color: var(--color-7);
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: 1px solid var(--color-7);
+  border-radius: 5px;
+}
+
+.footer_input {
+  background: #151515;
+  width: 50%;
+  display: block;
+  padding: 20px;
+  border: 1px solid var(--color-7);
+  color: var(--color-7);
+  margin-right: 20px;
+}
+
+.copy {
+  color: var(--color-7);
+}
+
+/* Estilos para el botón flotante en pantalla */
+.flotante {
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  border: 1px solid violet;
+  background: inherit;
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 100000;
+}
+
+.flotante::before {
+  box-shadow: inset 0 0 2000px var(--color-10);
+  filter: blur(10px);
+  background: inherit;
+}
+
+/* Estilos para tablet */
+@media (min-width: 768px) {
+  /* Agregar estilos para tablet aquí */
+}

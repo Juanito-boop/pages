@@ -1,0 +1,60 @@
+
+.logo {
+    height: 120px;
+    width: 120px;
+}
+
+.main-header {
+    padding: 0 20px;
+    width: 100%;
+}
+
+.centrado1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.main-header_title,
+.main-header-subsubtitle {
+    font-size: 2.5em;
+    color: #141313;
+    font-family: 'Raleway';
+}
+
+.main-header-subsubtitle {
+    font-variant: JIS04;
+}
+
+.main-header_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-header_txt {
+    font-size: 1.1em;
+    color: #000000;
+    font-family: 'poppins';
+}
+
+.icon-menu {
+    font-size: 1.5em;
+    border: none;
+    display: block;
+    padding: 10px 20px;
+}
+
+.main-header_input {
+    display: block;
+    padding: 10px;
+    width: 90%;
+    border-radius: 40px;
+    border: 3px solid #690069;
+}
+
+#lupa {
+    color: #fff;
+    /* box-shadow: #000 1px 0 20px; */
+}
