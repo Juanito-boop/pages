@@ -1,363 +1,730 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="60">
-    <link rel="icon" type="image/png" href="http://localhost:8000/img/image-removebg-preview.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&amp;display=swap">
-    <title>Vinos De La Villa</title>
-    <!-- Estilos -->
-    <link href="css/aside.css" rel="stylesheet">
-    <link href="css/Global.css" rel="stylesheet">
-    <link href="css/Hamburguer.css" rel="stylesheet">
-    <link href="css/Header.css" rel="stylesheet">
-    <link href="css/Products.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="Catalogo virtual de vinos importados en Villa de Leyva, Boyacá. Encuentra una amplia variedad de vinos de Francia, España, Italia, y más. ¡Visita nuestra tienda y disfruta de los mejores vinos del mundo!">
+  <meta name="keywords"
+    content="vinos, vinos importados, vinos de Francia, vinos de España, vinos de Italia, vinos de Villa de Leyva, vinos de Boyacá, vinos online, compra de vinos, vinos de calidad, vinos gourmet, vinos de autor, vinos artesanales, vinos de reserva, vinos de cosecha, vinos espumosos, tablas de queso, jamón, aceitunas, destilados, espumosos">
+
+  <link rel="icon" type="image/png"
+    href="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/some/image-removebg-preview.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@100;200;300;400;500;600;700;800;900&amp;family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;family=Raleway:wght@100;200;300;400;500;600;700;800;900&amp;display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;display=swap">
+<!--   <link rel="stylesheet" href="http://[::1]:5173/resources/css/app.css"> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    body {
+      background: rgb(99, 21, 92)
+    }
+
+    .mx-3 {
+      margin-left: 0.75rem;
+      margin-right: 0.75rem;
+    }
+  </style>
+
+  <meta name="robots" content="index,follow">
+  <title>Vinos de la Villa Wine Bar</title>
+  <link id="nordvpn-contentScript-extension-fonts" rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato">
 </head>
 
-<body>
-    <header class="main-header">
-        <div class="container container--flex">
-            <div class="main-header_container">
-                <a href="modulos/inicio-sesion/login.html">
-                    <img src="img/image-removebg-preview.png" alt="" class="logo">
-                </a>
-                <div class="centrado1">
-                    <h1 class="main-header_title">LOS VINOS</h1>
-                    <h2 class="main-header_subtitle"><i>Wine Store</i></h2>
-                    <h2 class="main-header_subtitle">Villa de Leyva, Carrera 9 #11-47 Segundo piso</h2>
-                    <p class="main-header_txt">CONTACTANOS (+57) 3219085857 <em class="fas fa-phone"></em></p>
-                </div>
-                <div class="icono-menu">
-                    <img src="img/bars-solid.svg" id="icono-menu" alt="">
-                </div>
-                <div class="cont-menu opacity" id="menu">
-                    <ul>
-                        <li>
-                            <a href="auth/login/em-pass">login email password</a>
-                        </li>
-                        <li>
-                            <a href="auth/login/magic">login magic link</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Add cart button here -->
+
+<body class="bg-colorPrincipal_2 font-inconsolata"
+  bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6Im5pbWxtZWpibW5lY25hZ2hnbWJhaG1iYWRkaGpiZWNnIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIn0sInZlcnNpb24iOiIxLjkuMTIiLCJzY29yZSI6MTA5MTJ9XQ=="
+  cz-shortcut-listen="true">
+
+  <div id="menu"
+    class="fixed top-[100%] z-[90] flex h-screen w-screen items-center justify-center bg-[rgb(42,42,42)] text-[40px] tracking-[1px] text-white"
+    bis_skin_checked="1">
+    <ul class="pt-auto flex w-[80%] flex-col gap-3">
+      <li
+        class="px-auto block cursor-pointer rounded-xl border border-[rgb(228,228,228)] py-[20px] text-[25px] text-[white] hover:bg-[rgb(228,228,228)] hover:text-[rgb(42,42,42)]">
+        <button class="w-full">
+          <a href="http://127.0.0.1:8000/auth/login/em-pass" class="no-underline hover:no-underline"> login email
+            password </a>
+        </button>
+      </li>
+      <li
+        class="px-auto block cursor-pointer rounded-xl border border-[rgb(228,228,228)] py-[20px] text-[25px] text-[white] hover:bg-[rgb(228,228,228)] hover:text-[rgb(42,42,42)]">
+        <button class="w-full">
+          <a href="http://127.0.0.1:8000/auth/login/magic" class="no-underline hover:no-underline"> login magic link
+          </a>
+        </button>
+      </li>
+      <li
+        class="px-auto block cursor-pointer rounded-xl border border-[rgb(228,228,228)] py-[20px] text-[25px] text-[white] hover:bg-[rgb(228,228,228)] hover:text-[rgb(42,42,42)]"
+        id="cerrar-menu">
+        <button class="w-full">
+          <a href="" class="no-underline hover:no-underline"> cerrar menu </a>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div id="principal" bis_skin_checked="1">
+    <header class="z-0 mx-2.5 mb-3 w-auto rounded-b-xl bg-magenta-500 pb-5">
+      <div class="mx-auto mb-[10px] flex items-center justify-evenly" bis_skin_checked="1">
+
+        <a href="http://127.0.0.1:8000/home" class="inline-block rounded-md p-3">
+          <img class="h-[120px] w-[120px]"
+            src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/some/image-removebg-preview.svg"
+            alt="">
+        </a>
+
+        <div class="inline-flex h-auto w-auto flex-col items-center justify-center" bis_skin_checked="1">
+          <div class="text-center text-[40px] font-semibold text-[black]" bis_skin_checked="1">LOS VINOS</div>
+          <div class="text-center text-2xl font-semibold text-[black]" bis_skin_checked="1">Wine Bar</div>
+          <div class="text-center text-2xl font-semibold text-[black]" bis_skin_checked="1">Villa de Leyva, Carrera 9
+            #11-47 Segundo piso</div>
+          <div
+            class="inline-flex h-[26px] items-center justify-center gap-[0.64px] self-stretch pl-[114.38px] pr-[113.98px]"
+            bis_skin_checked="1">
+            <div class="text-center text-lg font-bold text-[black]" bis_skin_checked="1">CONTACTANOS (+57) 3219085857
+              <em class="fas fa-phone" style="color: black"></em>
             </div>
+          </div>
         </div>
-        <form id="myForm" action="" method="POST">
-            <div class="main-header_container">
-                <label for="query"></label>
-                <input type="search" id="query" name="query" class="main-header_input"
-                    placeholder="What product are you looking for?">
-                <i class="fa-solid fa-magnifying-glass" id="lupa"></i>
+
+        <div class="relative mx-[50px] my-10" id="boton-menu" bis_skin_checked="1">
+          <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/some/bars-solid.svg"
+            id="icono-menu" alt="" class="w-10 cursor-pointer align-top">
+        </div>
+
+        <!-- Add cart button here -->
+      </div>
+      <form id="myForm" action="" method="POST" class="mx-auto inline-flex h-10 w-full items-center justify-evenly">
+        <div class="flex w-screen items-center justify-center p-5" bis_skin_checked="1">
+          <div class="w-full rounded-lg p-5" bis_skin_checked="1">
+            <div class="flex" bis_skin_checked="1">
+              <div
+                class="flex w-10 items-center justify-center rounded-bl-lg rounded-tl-lg border-r border-violet-500 bg-violet-200 p-5"
+                bis_skin_checked="1">
+                <svg viewBox="0 0 20 20" aria-hidden="true"
+                  class="pointer-events-none absolute w-5 fill-gray-500 transition">
+                  <path
+                    d="M16.72 17.78a.75.75 0 1 0 1.06-1.06l-1.06 1.06ZM9 14.5A5.5 5.5 0 0 1 3.5 9H2a7 7 0 0 0 7 7v-1.5ZM3.5 9A5.5 5.5 0 0 1 9 3.5V2a7 7 0 0 0-7 7h1.5ZM9 3.5A5.5 5.5 0 0 1 14.5 9H16a7 7 0 0 0-7-7v1.5Zm3.89 10.45 3.83 3.83 1.06-1.06-3.83-3.83-1.06 1.06ZM14.5 9a5.48 5.48 0 0 1-1.61 3.89l1.06 1.06A6.98 6.98 0 0 0 16 9h-1.5Zm-1.61 3.89A5.48 5.48 0 0 1 9 14.5V16a6.98 6.98 0 0 0 4.95-2.05l-1.06-1.06Z">
+                  </path>
+                </svg>
+              </div>
+              <input type="text" class="w-full border-violet-500 bg-white pl-2 text-base font-semibold outline-0"
+                placeholder="" id="" disabled="">
+              <input type="button" value="Buscar"
+                class="rounded-br-lg rounded-tr-lg bg-violet-600 p-2 font-semibold text-white transition-colors hover:bg-violet-800">
             </div>
-        </form>
+          </div>
+        </div>
+      </form>
     </header>
 
-    <div class="contenedor_principal">
-        <main>
-            <!-- tarjetas -->
-            <div class="container">
-                <div>
-                    <h2 class="main-title"><strong>NUESTROS VINOS MAS VENDIDOS</strong></h2>
-                    <div class="container-products" id="container1">
-                        <div class="product" style="display: block;">
-                            <div class="product_description">
-                                <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/245726.png"
-                                    alt="Petirrojo-Merlot" class="product_img">
-                                <h2 class="product_title bold">Petirrojo</h2>
-                                <h2 class="product_description bold">Merlot</h2>
-                                <h2 class="product_price bold">$ 87.422 COP</h2>
-                                <a href="/info/245726" class="product-btn"><i
-                                        class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;INFORMACIÓN</a>
-                            </div>
-                        </div>
-                        <div class="product" style="display: block;">
-                            <div class="product_description">
-                                <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/933404.png"
-                                    alt="Posta Pizzella-Malbec" class="product_img">
-                                <h2 class="product_title bold">Posta Pizzella</h2>
-                                <h2 class="product_description bold">Malbec</h2>
-                                <h2 class="product_price bold">$ 98.842 COP</h2>
-                                <a href="/info/933404" class="product-btn"><i
-                                        class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;INFORMACIÓN</a>
-                            </div>
-                        </div>
-                        <div class="product" style="display: block;">
-                            <div class="product_description">
-                                <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/948930.png"
-                                    alt="Marquez de villa de leyva-Cabernet Sauvignon" class="product_img">
-                                <h2 class="product_title bold">Marquez de villa de leyva</h2>
-                                <h2 class="product_description bold">Cabernet Sauvignon</h2>
-                                <h2 class="product_price bold">$ 477.162 COP</h2>
-                                <a href="/info/948930" class="product-btn"><i
-                                        class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;INFORMACIÓN</a>
-                            </div>
-                        </div>
-                        <div class="product" style="display: block;">
-                            <div class="product_description">
-                                <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/543152.png"
-                                    alt="Don Melchor-Cabernet Sauvignon" class="product_img">
-                                <h2 class="product_title bold">Don Melchor</h2>
-                                <h2 class="product_description bold">Cabernet Sauvignon</h2>
-                                <h2 class="product_price bold">$ 174.622 COP</h2>
-                                <a href="/info/543152" class="product-btn"><i
-                                        class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;INFORMACIÓN</a>
-                            </div>
-                        </div>
-                        <div class="product" style="display: block;">
-                            <div class="product_description">
-                                <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/330628.png"
-                                    alt="Purple Angel-Carménère" class="product_img">
-                                <h2 class="product_title bold">Purple Angel</h2>
-                                <h2 class="product_description bold">Carménère</h2>
-                                <h2 class="product_price bold">$ 113.962 COP</h2>
-                                <a href="/info/330628" class="product-btn"><i
-                                        class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;INFORMACIÓN</a>
-                            </div>
-                        </div>
+    <script src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/js/menu.js"></script>
+
+    <section class="mx-2.5 my-0 flex">
+
+      <aside class="min-w-[15%] whitespace-nowrap rounded-xl bg-color11 px-2">
+        <span
+          class="ml-2.5 mr-2.5 mt-2.5 flex items-center justify-center border-b border-b-colorPrincipal_1 font-poppins text-[2em] font-bold leading-[48px] text-colorPrincipal_1">
+          FILTROS
+        </span>
+        <div class="border-b border-solid border-b-color12 bg-color11 p-2.5" bis_skin_checked="1">
+          <h2 class="flex items-center justify-center text-xl font-bold text-colorPrincipal_1">CEPAS</h2>
+          <input type="checkbox" value="1" name="variedad[]" disabled="">&nbsp;<label>Cabernet Franc</label><br>
+          <input type="checkbox" value="2" name="variedad[]" disabled="">&nbsp;<label>Cabernet Sauvignon</label><br>
+          <input type="checkbox" value="3" name="variedad[]" disabled="">&nbsp;<label>Carménère</label><br>
+          <input type="checkbox" value="4" name="variedad[]" disabled="">&nbsp;<label>Malbec</label><br>
+          <input type="checkbox" value="5" name="variedad[]" disabled="">&nbsp;<label>Merlot</label><br>
+          <input type="checkbox" value="6" name="variedad[]" disabled="">&nbsp;<label>Pinot Grigio</label><br>
+        </div>
+        <div class="border-b border-solid border-b-color12 bg-color11 p-2.5" bis_skin_checked="1">
+          <h2 class="flex items-center justify-center text-xl font-bold text-colorPrincipal_1">PAISES</h2>
+          <input type="checkbox" value="1" name="pais[]" disabled="">&nbsp;<label>Argentina</label><br>
+          <input type="checkbox" value="2" name="pais[]" disabled="">&nbsp;<label>Colombia</label><br>
+          <input type="checkbox" value="3" name="pais[]" disabled="">&nbsp;<label>Chile</label><br>
+          <input type="checkbox" value="4" name="pais[]" disabled="">&nbsp;<label>España</label><br>
+          <input type="checkbox" value="5" name="pais[]" disabled="">&nbsp;<label>Italia</label><br>
+          <input type="checkbox" value="6" name="pais[]" disabled="">&nbsp;<label>Francia</label><br>
+        </div>
+      </aside>
+      <main class="scroll-none mx-[10px] max-w-[84%] rounded-[10px] bg-color11">
+
+        <section class="">
+          <article>
+            <h2
+              class="my-3 flex items-center justify-center font-poppins text-[2em] font-bold leading-10 text-colorPrincipal_1 uppercase">
+              Cabernet Franc</h2>
+            <div
+              class="mx-[5px] pb-[3%] items-center overflow-x-auto scrollbar-width-none -webkit-scrollbar -scroll-m-0 scroll-smooth scroll-snap-x-mandatory cont"
+              id="container1" bis_skin_checked="1">
+              <section class="flex px-2 justify-start [&amp;>div]:hover:backdrop:blur">
+                <div
+                  class="rounded-t-[10px] group-[transition-transform transform hover:translate-z-2 hover:scale-105 hover:shadow-xl hover:duration-hover:ease-in-out] max-w-[260px] min-w-[260px] ml-1 scroll-snap-align-start z-10 mx-2.5"
+                  bis_skin_checked="1">
+                  <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/652132.png"
+                    alt="Gran Enemigo-Cabernet Franc" class="my-2 rounded-[10px] w-[260px] h-[260px]">
+                  <div class="p-4 border-2 border-[#efb810] rounded-b-[10px]" bis_skin_checked="1">
+                    <span class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1 font-semibold">Gran Enemigo</span>
+                    <p class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1">Cabernet Franc</p>
+                    <div class="flex items-center justify-between" bis_skin_checked="1">
+                      <p class="mr-0 font-semibold font-poppins text-colorPrincipal_1 text-[0.9em]">$68.362 COP</p>
+                      <a href="/info/652132" class="mx-2">
+                        <button
+                          class="text-emerald-500 background-transparent font-semibold uppercase py-1 outline-none focus:outline-none ease-linear transition-all duration-150 border border-emerald-500 rounded-lg text-xs">&nbsp;INFORMACIÓN&nbsp;</button>
+                      </a>
                     </div>
-                    <div class="pagination">
-                        <button id="prev-btn1">
-                            <i class="fa-solid fa-arrow-left"></i>
-                        </button>
-                        <button id="next-btn1">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
+                  </div>
                 </div>
-                <div>
-                    <h2 class="main-title"><strong>NUESTROS MEJORES VINOS</strong></h2>
-                    <div class="container-products" id="container2">
-                        <div class="product" style="display: block;">
-                            <div class="product_description">
-                                <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/692159.png"
-                                    alt="Muga-Pinot Grigio" class="product_img">
-                                <h2 class="product_title bold">Muga</h2>
-                                <h2 class="product_description bold">Pinot Grigio</h2>
-                                <h2 class="product_price bold">$ 75.962 COP</h2>
-                                <a href="/info/692159" class="product-btn"><i
-                                        class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;INFORMACIÓN</a>
-                            </div>
-                        </div>
-                        <div class="product" style="display: block;">
-                            <div class="product_description">
-                                <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/323324.png"
-                                    alt="Reserva de la Tierra-Cabernet Sauvignon" class="product_img">
-                                <h2 class="product_title bold">Reserva de la Tierra</h2>
-                                <h2 class="product_description bold">Cabernet Sauvignon</h2>
-                                <h2 class="product_price bold">$ 75.962 COP</h2>
-                                <a href="/info/323324" class="product-btn"><i
-                                        class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;INFORMACIÓN</a>
-                            </div>
-                        </div>
-                        <div class="product" style="display: block;">
-                            <div class="product_description">
-                                <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/191880.png"
-                                    alt="Maison Castel Gran Reserva-Pinot Grigio" class="product_img">
-                                <h2 class="product_title bold">Maison Castel Gran Reserva</h2>
-                                <h2 class="product_description bold">Pinot Grigio</h2>
-                                <h2 class="product_price bold">$ 83.582 COP</h2>
-                                <a href="/info/191880" class="product-btn"><i
-                                        class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;INFORMACIÓN</a>
-                            </div>
-                        </div>
-                        <div class="product" style="display: block;">
-                            <div class="product_description">
-                                <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/257609.png"
-                                    alt="Santa Margherita-Pinot Grigio" class="product_img">
-                                <h2 class="product_title bold">Santa Margherita</h2>
-                                <h2 class="product_description bold">Pinot Grigio</h2>
-                                <h2 class="product_price bold">$ 189.962 COP</h2>
-                                <a href="/info/257609" class="product-btn"><i
-                                        class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;INFORMACIÓN</a>
-                            </div>
-                        </div>
-                        <div class="product" style="display: block;">
-                            <div class="product_description">
-                                <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/782699.png"
-                                    alt="Montes Alpha M-Cabernet Sauvignon" class="product_img">
-                                <h2 class="product_title bold">Montes Alpha M</h2>
-                                <h2 class="product_description bold">Cabernet Sauvignon</h2>
-                                <h2 class="product_price bold">$ 208.962 COP</h2>
-                                <a href="/info/782699" class="product-btn"><i
-                                        class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;INFORMACIÓN</a>
-                            </div>
-                        </div>
+              </section>
+            </div>
+            <div class="flex justify-center mb-5 bg-transparent" bis_skin_checked="1">
+              <button type="button" class="flex items-center p-2 px-4 mr-2 leading-none rounded-full bg-[#63155C]"
+                id="prev-btn1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left"
+                  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l14 0"></path>
+                  <path d="M5 12l4 4"></path>
+                  <path d="M5 12l4 -4"></path>
+                </svg>
+              </button>
+              <button type="button" class="flex items-center p-2 px-4 ml-2 leading-none rounded-full bg-[#63155C]"
+                id="next-btn1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right"
+                  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l14 0"></path>
+                  <path d="M15 16l4 -4"></path>
+                  <path d="M15 8l4 4"></path>
+                </svg>
+              </button>
+            </div>
+          </article>
+          <article>
+            <h2
+              class="my-3 flex items-center justify-center font-poppins text-[2em] font-bold leading-10 text-colorPrincipal_1 uppercase">
+              Cabernet Sauvignon</h2>
+            <div
+              class="mx-[5px] pb-[3%] items-center overflow-x-auto scrollbar-width-none -webkit-scrollbar -scroll-m-0 scroll-smooth scroll-snap-x-mandatory cont"
+              id="container2" bis_skin_checked="1">
+              <section class="flex px-2 justify-start [&amp;>div]:hover:backdrop:blur">
+                <div
+                  class="rounded-t-[10px] group-[transition-transform transform hover:translate-z-2 hover:scale-105 hover:shadow-xl hover:duration-hover:ease-in-out] max-w-[260px] min-w-[260px] ml-1 scroll-snap-align-start z-10 mx-2.5"
+                  bis_skin_checked="1">
+                  <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/948930.png"
+                    alt="Marquez de villa de leyva-Cabernet Sauvignon" class="my-2 rounded-[10px] w-[260px] h-[260px]">
+                  <div class="p-4 border-2 border-[#efb810] rounded-b-[10px]" bis_skin_checked="1">
+                    <span class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1 font-semibold">Marquez de villa de
+                      leyva</span>
+                    <p class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1">Cabernet Sauvignon</p>
+                    <div class="flex items-center justify-between" bis_skin_checked="1">
+                      <p class="mr-0 font-semibold font-poppins text-colorPrincipal_1 text-[0.9em]">$477.162 COP</p>
+                      <a href="/info/948930" class="mx-2">
+                        <button
+                          class="text-emerald-500 background-transparent font-semibold uppercase py-1 outline-none focus:outline-none ease-linear transition-all duration-150 border border-emerald-500 rounded-lg text-xs">&nbsp;INFORMACIÓN&nbsp;</button>
+                      </a>
                     </div>
-                    <div class="pagination">
-                        <button id="prev-btn2">
-                            <i class="fa-solid fa-arrow-left"></i>
-                        </button>
-                        <button id="next-btn2">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
+                  </div>
                 </div>
-                <div>
-                    <h2 class="main-title"><strong>VINOS IMPORTADOS MAS EXQUISITOS</strong></h2>
-                    <div class="container-products" id="container3">
-                        <div class="product" style="display: block;">
-                            <div class="product_description">
-                                <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/850550.png"
-                                    alt="Angelica Zapata-Malbec" class="product_img">
-                                <h2 class="product_title bold">Angelica Zapata</h2>
-                                <h2 class="product_description bold">Malbec</h2>
-                                <h2 class="product_price bold">$ 569.962 COP</h2>
-                                <a href="/info/850550" class="product-btn"><i
-                                        class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;INFORMACIÓN</a>
-                            </div>
-                        </div>
-                        <div class="product" style="display: block;">
-                            <div class="product_description">
-                                <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/652132.png"
-                                    alt="Gran Enemigo-Cabernet Franc" class="product_img">
-                                <h2 class="product_title bold">Gran Enemigo</h2>
-                                <h2 class="product_description bold">Cabernet Franc</h2>
-                                <h2 class="product_price bold">$ 68.362 COP</h2>
-                                <a href="/info/652132" class="product-btn"><i
-                                        class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;INFORMACIÓN</a>
-                            </div>
-                        </div>
-                        <div class="product" style="display: block;">
-                            <div class="product_description">
-                                <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/438553.png"
-                                    alt="Zuccardi Serie A-Malbec" class="product_img">
-                                <h2 class="product_title bold">Zuccardi Serie A</h2>
-                                <h2 class="product_description bold">Malbec</h2>
-                                <h2 class="product_price bold">$ 102.762 COP</h2>
-                                <a href="/info/438553" class="product-btn"><i
-                                        class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;INFORMACIÓN</a>
-                            </div>
-                        </div>
-                        <div class="product" style="display: block;">
-                            <div class="product_description">
-                                <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/178631.png"
-                                    alt="Cerro Verde-Malbec" class="product_img">
-                                <h2 class="product_title bold">Cerro Verde</h2>
-                                <h2 class="product_description bold">Malbec</h2>
-                                <h2 class="product_price bold">$ 91.362 COP</h2>
-                                <a href="/info/178631" class="product-btn"><i
-                                        class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;INFORMACIÓN</a>
-                            </div>
-                        </div>
-                        <div class="product" style="display: block;">
-                            <div class="product_description">
-                                <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/265178.png"
-                                    alt="Codice-Malbec" class="product_img">
-                                <h2 class="product_title bold">Codice</h2>
-                                <h2 class="product_description bold">Malbec</h2>
-                                <h2 class="product_price bold">$ 45.562 COP</h2>
-                                <a href="/info/265178" class="product-btn"><i
-                                        class="fa-solid fa-magnifying-glass-plus"></i>&nbsp;INFORMACIÓN</a>
-                            </div>
-                        </div>
+                <div
+                  class="rounded-t-[10px] group-[transition-transform transform hover:translate-z-2 hover:scale-105 hover:shadow-xl hover:duration-hover:ease-in-out] max-w-[260px] min-w-[260px] ml-1 scroll-snap-align-start z-10 mx-2.5"
+                  bis_skin_checked="1">
+                  <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/543152.png"
+                    alt="Don Melchor-Cabernet Sauvignon" class="my-2 rounded-[10px] w-[260px] h-[260px]">
+                  <div class="p-4 border-2 border-[#efb810] rounded-b-[10px]" bis_skin_checked="1">
+                    <span class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1 font-semibold">Don Melchor</span>
+                    <p class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1">Cabernet Sauvignon</p>
+                    <div class="flex items-center justify-between" bis_skin_checked="1">
+                      <p class="mr-0 font-semibold font-poppins text-colorPrincipal_1 text-[0.9em]">$174.622 COP</p>
+                      <a href="/info/543152" class="mx-2">
+                        <button
+                          class="text-emerald-500 background-transparent font-semibold uppercase py-1 outline-none focus:outline-none ease-linear transition-all duration-150 border border-emerald-500 rounded-lg text-xs">&nbsp;INFORMACIÓN&nbsp;</button>
+                      </a>
                     </div>
-                    <div class="pagination">
-                        <button id="prev-btn3">
-                            <i class="fa-solid fa-arrow-left"></i>
-                        </button>
-                        <button id="next-btn3">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
+                  </div>
                 </div>
+                <div
+                  class="rounded-t-[10px] group-[transition-transform transform hover:translate-z-2 hover:scale-105 hover:shadow-xl hover:duration-hover:ease-in-out] max-w-[260px] min-w-[260px] ml-1 scroll-snap-align-start z-10 mx-2.5"
+                  bis_skin_checked="1">
+                  <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/323324.png"
+                    alt="Reserva de la Tierra-Cabernet Sauvignon" class="my-2 rounded-[10px] w-[260px] h-[260px]">
+                  <div class="p-4 border-2 border-[#efb810] rounded-b-[10px]" bis_skin_checked="1">
+                    <span class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1 font-semibold">Reserva de la
+                      Tierra</span>
+                    <p class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1">Cabernet Sauvignon</p>
+                    <div class="flex items-center justify-between" bis_skin_checked="1">
+                      <p class="mr-0 font-semibold font-poppins text-colorPrincipal_1 text-[0.9em]">$75.962 COP</p>
+                      <a href="/info/323324" class="mx-2">
+                        <button
+                          class="text-emerald-500 background-transparent font-semibold uppercase py-1 outline-none focus:outline-none ease-linear transition-all duration-150 border border-emerald-500 rounded-lg text-xs">&nbsp;INFORMACIÓN&nbsp;</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="rounded-t-[10px] group-[transition-transform transform hover:translate-z-2 hover:scale-105 hover:shadow-xl hover:duration-hover:ease-in-out] max-w-[260px] min-w-[260px] ml-1 scroll-snap-align-start z-10 mx-2.5"
+                  bis_skin_checked="1">
+                  <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/782699.png"
+                    alt="Montes Alpha M-Cabernet Sauvignon" class="my-2 rounded-[10px] w-[260px] h-[260px]">
+                  <div class="p-4 border-2 border-[#efb810] rounded-b-[10px]" bis_skin_checked="1">
+                    <span class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1 font-semibold">Montes Alpha
+                      M</span>
+                    <p class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1">Cabernet Sauvignon</p>
+                    <div class="flex items-center justify-between" bis_skin_checked="1">
+                      <p class="mr-0 font-semibold font-poppins text-colorPrincipal_1 text-[0.9em]">$208.962 COP</p>
+                      <a href="/info/782699" class="mx-2">
+                        <button
+                          class="text-emerald-500 background-transparent font-semibold uppercase py-1 outline-none focus:outline-none ease-linear transition-all duration-150 border border-emerald-500 rounded-lg text-xs">&nbsp;INFORMACIÓN&nbsp;</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
-        </main>
-    </div>
-    <div class="testimonials">
-        <div class="container_testimonials">
-            <h2 class="section_title">DESCUBRE UN POCO DE NOSOTROS</h2>
-            <h3 class="testimonial_title">SOMOS VINOS DE LA VILLA</h3>
-            <p class="testimonial_txt">
-                Estamos ubicados en Villa De Leyva boyaca Carrera 9 #11-47 Segundo piso de La Galleta, Villa de Leyva,
-                Boyaca, Colombia
-            </p>
-            <p class="testimonial_txt">
-                Un lugar para los amantes del vino. Vino por copa desde COP$8000, Botellas
-                desde COP$27.900, Amplio surtido en vinos de: Colombia, España, Italia, Francia, Chile, Argentina y
-                California para acompañar: Tapas, Paninis, tablas de quesos y jamones. Buena música. Ambiente agradable.
-            </p>
-            <p class="testimonial_txt">
-                Poseemos diferentes servicios como: Bar de vinos. También podemos ofrecer servicio de restaurante como:
-                Cenas, Abierto hasta tarde (revisar horario según corresponda),
-                Bebidas
-            </p>
-            <p class="testimonial_txt">
-                OTRAS CARACTERÍSTICAS: Comodos Asientos, Brindamos el fino alcohol, wifi gratis, Aceptamos tarjetas de
-                crédito, Servicio de mesa, Reservas, Acceso para silla de ruedas, Vino y cerveza
-            </p>
-            <p>HORARIOS DE ATENCION :</p>
-            <ul>
-                <li>dom 12:00 p.m. - 10:00 p.m.</li>
-                <li>lun-mar-mié-jue 3:00 p.m. - 10:00 p.m.</li>
-                <li>vie-sáb 12:00 p.m. - 12:00 a.m.</li>
-            </ul>
-        </div>
-        <div class="container-editor">
-            <div class="editor_item">
-                <img src="img/pexels-payam-masouri-731348.jpg" alt="" class="editor_img">
-                <p class="editor_circle">SOPORTE </p>
+            <div class="flex justify-center mb-5 bg-transparent" bis_skin_checked="1">
+              <button type="button" class="flex items-center p-2 px-4 mr-2 leading-none rounded-full bg-[#63155C]"
+                id="prev-btn2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left"
+                  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l14 0"></path>
+                  <path d="M5 12l4 4"></path>
+                  <path d="M5 12l4 -4"></path>
+                </svg>
+              </button>
+              <button type="button" class="flex items-center p-2 px-4 ml-2 leading-none rounded-full bg-[#63155C]"
+                id="next-btn2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right"
+                  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l14 0"></path>
+                  <path d="M15 16l4 -4"></path>
+                  <path d="M15 8l4 4"></path>
+                </svg>
+              </button>
             </div>
-            <div class="editor_item">
-                <img src="img/pexels-grape-things-2647933.jpg" alt="" class="editor_img">
-                <p class="editor_circle">SERVICIO AL CLIENTE </p>
+          </article>
+          <article>
+            <h2
+              class="my-3 flex items-center justify-center font-poppins text-[2em] font-bold leading-10 text-colorPrincipal_1 uppercase">
+              Carménère</h2>
+            <div
+              class="mx-[5px] pb-[3%] items-center overflow-x-auto scrollbar-width-none -webkit-scrollbar -scroll-m-0 scroll-smooth scroll-snap-x-mandatory cont"
+              id="container3" bis_skin_checked="1">
+              <section class="flex px-2 justify-start [&amp;>div]:hover:backdrop:blur">
+                <div
+                  class="rounded-t-[10px] group-[transition-transform transform hover:translate-z-2 hover:scale-105 hover:shadow-xl hover:duration-hover:ease-in-out] max-w-[260px] min-w-[260px] ml-1 scroll-snap-align-start z-10 mx-2.5"
+                  bis_skin_checked="1">
+                  <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/330628.png"
+                    alt="Purple Angel-Carménère" class="my-2 rounded-[10px] w-[260px] h-[260px]">
+                  <div class="p-4 border-2 border-[#efb810] rounded-b-[10px]" bis_skin_checked="1">
+                    <span class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1 font-semibold">Purple Angel</span>
+                    <p class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1">Carménère</p>
+                    <div class="flex items-center justify-between" bis_skin_checked="1">
+                      <p class="mr-0 font-semibold font-poppins text-colorPrincipal_1 text-[0.9em]">$113.962 COP</p>
+                      <a href="/info/330628" class="mx-2">
+                        <button
+                          class="text-emerald-500 background-transparent font-semibold uppercase py-1 outline-none focus:outline-none ease-linear transition-all duration-150 border border-emerald-500 rounded-lg text-xs">&nbsp;INFORMACIÓN&nbsp;</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
-        </div>
-        <div class="container-tips">
-            <div class="tip">
-                <em class="far fa-hand-paper"></em>
-                <h2 class="tip_title">DUEÑO</h2>
-                <p class="tip_txt">DIEGO Y COMPAÑIA S.A.S</p>
-                <p>NIT 890309454-8</p>
-                <p>KRA 9 # 11-47 P.2</p>
-                <a href="#" class="btn_shop">CONTACTO</a>
+            <div class="flex justify-center mb-5 bg-transparent" bis_skin_checked="1">
+              <button type="button" class="flex items-center p-2 px-4 mr-2 leading-none rounded-full bg-[#63155C]"
+                id="prev-btn3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left"
+                  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l14 0"></path>
+                  <path d="M5 12l4 4"></path>
+                  <path d="M5 12l4 -4"></path>
+                </svg>
+              </button>
+              <button type="button" class="flex items-center p-2 px-4 ml-2 leading-none rounded-full bg-[#63155C]"
+                id="next-btn3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right"
+                  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l14 0"></path>
+                  <path d="M15 16l4 -4"></path>
+                  <path d="M15 8l4 4"></path>
+                </svg>
+              </button>
             </div>
-            <div class="tip">
-                <em class="fas fa-rocket"></em>
-                <h2 class="tip_title">Gerente General</h2>
-                <p class="tip_txt">NUBIA VELASCO</p>
-                <p>KRA 9 # 11-47 P.2</p>
-                <p>Telefono: 3219085857</p>
-                <p>Correo Electronico: ventas@vinosdelavilla.com</p>
-                <a href="#" class="btn_shop">CONTACTO</a>
+          </article>
+          <article>
+            <h2
+              class="my-3 flex items-center justify-center font-poppins text-[2em] font-bold leading-10 text-colorPrincipal_1 uppercase">
+              Malbec</h2>
+            <div
+              class="mx-[5px] pb-[3%] items-center overflow-x-auto scrollbar-width-none -webkit-scrollbar -scroll-m-0 scroll-smooth scroll-snap-x-mandatory cont"
+              id="container4" bis_skin_checked="1">
+              <section class="flex px-2 justify-start [&amp;>div]:hover:backdrop:blur">
+                <div
+                  class="rounded-t-[10px] group-[transition-transform transform hover:translate-z-2 hover:scale-105 hover:shadow-xl hover:duration-hover:ease-in-out] max-w-[260px] min-w-[260px] ml-1 scroll-snap-align-start z-10 mx-2.5"
+                  bis_skin_checked="1">
+                  <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/933404.png"
+                    alt="Posta Pizzella-Malbec" class="my-2 rounded-[10px] w-[260px] h-[260px]">
+                  <div class="p-4 border-2 border-[#efb810] rounded-b-[10px]" bis_skin_checked="1">
+                    <span class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1 font-semibold">Posta
+                      Pizzella</span>
+                    <p class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1">Malbec</p>
+                    <div class="flex items-center justify-between" bis_skin_checked="1">
+                      <p class="mr-0 font-semibold font-poppins text-colorPrincipal_1 text-[0.9em]">$98.842 COP</p>
+                      <a href="/info/933404" class="mx-2">
+                        <button
+                          class="text-emerald-500 background-transparent font-semibold uppercase py-1 outline-none focus:outline-none ease-linear transition-all duration-150 border border-emerald-500 rounded-lg text-xs">&nbsp;INFORMACIÓN&nbsp;</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="rounded-t-[10px] group-[transition-transform transform hover:translate-z-2 hover:scale-105 hover:shadow-xl hover:duration-hover:ease-in-out] max-w-[260px] min-w-[260px] ml-1 scroll-snap-align-start z-10 mx-2.5"
+                  bis_skin_checked="1">
+                  <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/850550.png"
+                    alt="Angelica Zapata-Malbec" class="my-2 rounded-[10px] w-[260px] h-[260px]">
+                  <div class="p-4 border-2 border-[#efb810] rounded-b-[10px]" bis_skin_checked="1">
+                    <span class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1 font-semibold">Angelica
+                      Zapata</span>
+                    <p class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1">Malbec</p>
+                    <div class="flex items-center justify-between" bis_skin_checked="1">
+                      <p class="mr-0 font-semibold font-poppins text-colorPrincipal_1 text-[0.9em]">$569.962 COP</p>
+                      <a href="/info/850550" class="mx-2">
+                        <button
+                          class="text-emerald-500 background-transparent font-semibold uppercase py-1 outline-none focus:outline-none ease-linear transition-all duration-150 border border-emerald-500 rounded-lg text-xs">&nbsp;INFORMACIÓN&nbsp;</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="rounded-t-[10px] group-[transition-transform transform hover:translate-z-2 hover:scale-105 hover:shadow-xl hover:duration-hover:ease-in-out] max-w-[260px] min-w-[260px] ml-1 scroll-snap-align-start z-10 mx-2.5"
+                  bis_skin_checked="1">
+                  <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/438553.png"
+                    alt="Zuccardi Serie A-Malbec" class="my-2 rounded-[10px] w-[260px] h-[260px]">
+                  <div class="p-4 border-2 border-[#efb810] rounded-b-[10px]" bis_skin_checked="1">
+                    <span class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1 font-semibold">Zuccardi Serie
+                      A</span>
+                    <p class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1">Malbec</p>
+                    <div class="flex items-center justify-between" bis_skin_checked="1">
+                      <p class="mr-0 font-semibold font-poppins text-colorPrincipal_1 text-[0.9em]">$102.762 COP</p>
+                      <a href="/info/438553" class="mx-2">
+                        <button
+                          class="text-emerald-500 background-transparent font-semibold uppercase py-1 outline-none focus:outline-none ease-linear transition-all duration-150 border border-emerald-500 rounded-lg text-xs">&nbsp;INFORMACIÓN&nbsp;</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="rounded-t-[10px] group-[transition-transform transform hover:translate-z-2 hover:scale-105 hover:shadow-xl hover:duration-hover:ease-in-out] max-w-[260px] min-w-[260px] ml-1 scroll-snap-align-start z-10 mx-2.5"
+                  bis_skin_checked="1">
+                  <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/178631.png"
+                    alt="Cerro Verde-Malbec" class="my-2 rounded-[10px] w-[260px] h-[260px]">
+                  <div class="p-4 border-2 border-[#efb810] rounded-b-[10px]" bis_skin_checked="1">
+                    <span class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1 font-semibold">Cerro Verde</span>
+                    <p class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1">Malbec</p>
+                    <div class="flex items-center justify-between" bis_skin_checked="1">
+                      <p class="mr-0 font-semibold font-poppins text-colorPrincipal_1 text-[0.9em]">$91.362 COP</p>
+                      <a href="/info/178631" class="mx-2">
+                        <button
+                          class="text-emerald-500 background-transparent font-semibold uppercase py-1 outline-none focus:outline-none ease-linear transition-all duration-150 border border-emerald-500 rounded-lg text-xs">&nbsp;INFORMACIÓN&nbsp;</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="rounded-t-[10px] group-[transition-transform transform hover:translate-z-2 hover:scale-105 hover:shadow-xl hover:duration-hover:ease-in-out] max-w-[260px] min-w-[260px] ml-1 scroll-snap-align-start z-10 mx-2.5"
+                  bis_skin_checked="1">
+                  <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/265178.png"
+                    alt="Codice-Malbec" class="my-2 rounded-[10px] w-[260px] h-[260px]">
+                  <div class="p-4 border-2 border-[#efb810] rounded-b-[10px]" bis_skin_checked="1">
+                    <span class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1 font-semibold">Codice</span>
+                    <p class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1">Malbec</p>
+                    <div class="flex items-center justify-between" bis_skin_checked="1">
+                      <p class="mr-0 font-semibold font-poppins text-colorPrincipal_1 text-[0.9em]">$45.562 COP</p>
+                      <a href="/info/265178" class="mx-2">
+                        <button
+                          class="text-emerald-500 background-transparent font-semibold uppercase py-1 outline-none focus:outline-none ease-linear transition-all duration-150 border border-emerald-500 rounded-lg text-xs">&nbsp;INFORMACIÓN&nbsp;</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
+            <div class="flex justify-center mb-5 bg-transparent" bis_skin_checked="1">
+              <button type="button" class="flex items-center p-2 px-4 mr-2 leading-none rounded-full bg-[#63155C]"
+                id="prev-btn4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left"
+                  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l14 0"></path>
+                  <path d="M5 12l4 4"></path>
+                  <path d="M5 12l4 -4"></path>
+                </svg>
+              </button>
+              <button type="button" class="flex items-center p-2 px-4 ml-2 leading-none rounded-full bg-[#63155C]"
+                id="next-btn4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right"
+                  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l14 0"></path>
+                  <path d="M15 16l4 -4"></path>
+                  <path d="M15 8l4 4"></path>
+                </svg>
+              </button>
+            </div>
+          </article>
+          <article>
+            <h2
+              class="my-3 flex items-center justify-center font-poppins text-[2em] font-bold leading-10 text-colorPrincipal_1 uppercase">
+              Merlot</h2>
+            <div
+              class="mx-[5px] pb-[3%] items-center overflow-x-auto scrollbar-width-none -webkit-scrollbar -scroll-m-0 scroll-smooth scroll-snap-x-mandatory cont"
+              id="container5" bis_skin_checked="1">
+              <section class="flex px-2 justify-start [&amp;>div]:hover:backdrop:blur">
+                <div
+                  class="rounded-t-[10px] group-[transition-transform transform hover:translate-z-2 hover:scale-105 hover:shadow-xl hover:duration-hover:ease-in-out] max-w-[260px] min-w-[260px] ml-1 scroll-snap-align-start z-10 mx-2.5"
+                  bis_skin_checked="1">
+                  <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/245726.png"
+                    alt="Petirrojo-Merlot" class="my-2 rounded-[10px] w-[260px] h-[260px]">
+                  <div class="p-4 border-2 border-[#efb810] rounded-b-[10px]" bis_skin_checked="1">
+                    <span class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1 font-semibold">Petirrojo</span>
+                    <p class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1">Merlot</p>
+                    <div class="flex items-center justify-between" bis_skin_checked="1">
+                      <p class="mr-0 font-semibold font-poppins text-colorPrincipal_1 text-[0.9em]">$87.422 COP</p>
+                      <a href="/info/245726" class="mx-2">
+                        <button
+                          class="text-emerald-500 background-transparent font-semibold uppercase py-1 outline-none focus:outline-none ease-linear transition-all duration-150 border border-emerald-500 rounded-lg text-xs">&nbsp;INFORMACIÓN&nbsp;</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="flex justify-center mb-5 bg-transparent" bis_skin_checked="1">
+              <button type="button" class="flex items-center p-2 px-4 mr-2 leading-none rounded-full bg-[#63155C]"
+                id="prev-btn5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left"
+                  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l14 0"></path>
+                  <path d="M5 12l4 4"></path>
+                  <path d="M5 12l4 -4"></path>
+                </svg>
+              </button>
+              <button type="button" class="flex items-center p-2 px-4 ml-2 leading-none rounded-full bg-[#63155C]"
+                id="next-btn5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right"
+                  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l14 0"></path>
+                  <path d="M15 16l4 -4"></path>
+                  <path d="M15 8l4 4"></path>
+                </svg>
+              </button>
+            </div>
+          </article>
+          <article>
+            <h2
+              class="my-3 flex items-center justify-center font-poppins text-[2em] font-bold leading-10 text-colorPrincipal_1 uppercase">
+              Pinot Grigio</h2>
+            <div
+              class="mx-[5px] pb-[3%] items-center overflow-x-auto scrollbar-width-none -webkit-scrollbar -scroll-m-0 scroll-smooth scroll-snap-x-mandatory cont"
+              id="container6" bis_skin_checked="1">
+              <section class="flex px-2 justify-start [&amp;>div]:hover:backdrop:blur">
+                <div
+                  class="rounded-t-[10px] group-[transition-transform transform hover:translate-z-2 hover:scale-105 hover:shadow-xl hover:duration-hover:ease-in-out] max-w-[260px] min-w-[260px] ml-1 scroll-snap-align-start z-10 mx-2.5"
+                  bis_skin_checked="1">
+                  <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/692159.png"
+                    alt="Muga-Pinot Grigio" class="my-2 rounded-[10px] w-[260px] h-[260px]">
+                  <div class="p-4 border-2 border-[#efb810] rounded-b-[10px]" bis_skin_checked="1">
+                    <span class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1 font-semibold">Muga</span>
+                    <p class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1">Pinot Grigio</p>
+                    <div class="flex items-center justify-between" bis_skin_checked="1">
+                      <p class="mr-0 font-semibold font-poppins text-colorPrincipal_1 text-[0.9em]">$75.962 COP</p>
+                      <a href="/info/692159" class="mx-2">
+                        <button
+                          class="text-emerald-500 background-transparent font-semibold uppercase py-1 outline-none focus:outline-none ease-linear transition-all duration-150 border border-emerald-500 rounded-lg text-xs">&nbsp;INFORMACIÓN&nbsp;</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="rounded-t-[10px] group-[transition-transform transform hover:translate-z-2 hover:scale-105 hover:shadow-xl hover:duration-hover:ease-in-out] max-w-[260px] min-w-[260px] ml-1 scroll-snap-align-start z-10 mx-2.5"
+                  bis_skin_checked="1">
+                  <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/191880.png"
+                    alt="Maison Castel Gran Reserva-Pinot Grigio" class="my-2 rounded-[10px] w-[260px] h-[260px]">
+                  <div class="p-4 border-2 border-[#efb810] rounded-b-[10px]" bis_skin_checked="1">
+                    <span class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1 font-semibold">Maison Castel Gran
+                      Reserva</span>
+                    <p class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1">Pinot Grigio</p>
+                    <div class="flex items-center justify-between" bis_skin_checked="1">
+                      <p class="mr-0 font-semibold font-poppins text-colorPrincipal_1 text-[0.9em]">$83.582 COP</p>
+                      <a href="/info/191880" class="mx-2">
+                        <button
+                          class="text-emerald-500 background-transparent font-semibold uppercase py-1 outline-none focus:outline-none ease-linear transition-all duration-150 border border-emerald-500 rounded-lg text-xs">&nbsp;INFORMACIÓN&nbsp;</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="rounded-t-[10px] group-[transition-transform transform hover:translate-z-2 hover:scale-105 hover:shadow-xl hover:duration-hover:ease-in-out] max-w-[260px] min-w-[260px] ml-1 scroll-snap-align-start z-10 mx-2.5"
+                  bis_skin_checked="1">
+                  <img src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/257609.png"
+                    alt="Santa Margherita-Pinot Grigio" class="my-2 rounded-[10px] w-[260px] h-[260px]">
+                  <div class="p-4 border-2 border-[#efb810] rounded-b-[10px]" bis_skin_checked="1">
+                    <span class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1 font-semibold">Santa
+                      Margherita</span>
+                    <p class="mb-2 text-[0.9em] font-poppins text-colorPrincipal_1">Pinot Grigio</p>
+                    <div class="flex items-center justify-between" bis_skin_checked="1">
+                      <p class="mr-0 font-semibold font-poppins text-colorPrincipal_1 text-[0.9em]">$189.962 COP</p>
+                      <a href="/info/257609" class="mx-2">
+                        <button
+                          class="text-emerald-500 background-transparent font-semibold uppercase py-1 outline-none focus:outline-none ease-linear transition-all duration-150 border border-emerald-500 rounded-lg text-xs">&nbsp;INFORMACIÓN&nbsp;</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="flex justify-center mb-5 bg-transparent" bis_skin_checked="1">
+              <button type="button" class="flex items-center p-2 px-4 mr-2 leading-none rounded-full bg-[#63155C]"
+                id="prev-btn6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-left"
+                  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l14 0"></path>
+                  <path d="M5 12l4 4"></path>
+                  <path d="M5 12l4 -4"></path>
+                </svg>
+              </button>
+              <button type="button" class="flex items-center p-2 px-4 ml-2 leading-none rounded-full bg-[#63155C]"
+                id="next-btn6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right"
+                  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M5 12l14 0"></path>
+                  <path d="M15 16l4 -4"></path>
+                  <path d="M15 8l4 4"></path>
+                </svg>
+              </button>
+            </div>
+          </article>
+        </section>
+      </main>
+    </section>
+
+    <section class="">
+      <div class="m-5 rounded-[10px] bg-colorPrincipal_1 p-5 text-start" bis_skin_checked="1">
+        <h2 class="font-poppins font-bold">
+          DESCUBRE UN POCO DE NOSOTROS
+        </h2>
+        <h3 class="font-poppins font-semibold">
+          SOMOS VINOS DE LA VILLA
+        </h3>
+        <p class="font-poppins">
+          Estamos ubicados en Villa De Leyva boyaca Carrera 9 #11-47 Segundo piso de La Galleta, Villa de Leyva,
+          Boyaca, Colombia
+        </p>
+        <p class="font-poppins">
+          Un lugar para los amantes del vino. Vino por copa desde COP$8000, Botellas
+          desde COP$27.900, Amplio surtido en vinos de: Colombia, España, Italia, Francia, Chile, Argentina y
+          California para acompañar: Tapas, Paninis, tablas de quesos y jamones. Buena música. Ambiente agradable.
+        </p>
+        <p class="font-poppins">Poseemos diferentes servicios como:</p>
+        <ol>
+          <li>
+            * Bar de vinos
+          </li>
+          <li>
+            * Cenas
+          </li>
+          <li>
+            * Abierto hasta tarde (revisar horario según corresponda)
+          </li>
+          <li>
+            * Bebidas
+          </li>
+        </ol>
+      </div>
+      <div class="m-5 flex flex-row justify-center gap-20 rounded-[10px] bg-color2 p-5 text-center"
+        bis_skin_checked="1">
+        <div class="rounded-[10px] p-4 hover:bg-[rgb(122,122,122)]" bis_skin_checked="1">
+          <em class="far fa-hand-paper"></em>
+          <p class="font-poppins font-bold uppercase">
+            DUEÑO
+          </p>
+          <p class="font-poppins">
+            DIEGO Y COMPAÑIA S.A.S
+          </p>
+          <p class="font-poppins">NIT 890309454-8</p>
+          <p class="font-poppins">KRA 9 # 11-47 P.2</p>
+          <a href="#" class="btn_shop">
+            CONTACTO
+          </a>
         </div>
-    </div>
-    <footer class="main-footer">
-        <div class="footer_section">
-            <h2 class="footer_title">UBICACION :</h2>
-            <p class="footer_txt">
-                Carrera 9 #11-47 Segundo piso de La Galleta, a unos pasos de la plaza principal de Villa de Leyva,
-                Boyaca,
-                Colombia
-            </p>
+        <div class="rounded-[10px] p-4 hover:bg-[rgb(122,122,122)]" bis_skin_checked="1">
+          <em class="fas fa-rocket"></em>
+          <p class="font-poppins font-bold uppercase">
+            Gerente General
+          </p>
+          <p class="font-poppins">NUBIA VELASCO</p>
+          <p class="font-poppins">KRA 9 # 11-47 P.2</p>
+          <p class="font-poppins">Telefono: 3219085857</p>
+          <p class="font-poppins">Correo Electronico: </p>
+          <p class="font-poppins">ventas@vinosdelavilla.com</p>
+          <a href="#" class="btn_shop">CONTACTO</a>
         </div>
-        <div class="footer_section">
-            <h2 class="footer_title">Links</h2>
-            <p class="footer_txt"><a href="home">HOME</a></p>
-        </div>
+      </div>
+    </section>
+
+    <footer class="flex flex-col bg-color6 p-8">
+      <div class="footer_section flex flex-row gap-2" bis_skin_checked="1">
+        <h2 class="text-color8">
+          UBICACION:
+        </h2>
+        <p class="text-color8">
+          Carrera 9 #11-47 Segundo piso de La Galleta, a unos pasos de la plaza principal de Villa de Leyva, Boyaca,
+          Colombia
+        </p>
+      </div>
+      <div class="flex flex-row gap-3" bis_skin_checked="1">
+        <h2 class="uppercase text-color8">
+          Links
+        </h2>
+        <p class="text-color9">
+          <a href="http://127.0.0.1:8000/home">
+            HOME
+          </a>
+        </p>
+      </div>
     </footer>
-    <script src="js/hamburguer.js"></script>
-    <script src="js/gridContainer.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
-        integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
-    <script src="modulos/buscador/buscador.js"></script>
-    <script>
-        if (window.opener && window.opener !== window) {
-            window.opener.close(); // Cierra la página anterior (página de confirmación)
-        }
-    </script>
-    <!-- <script type="text/javascript">
-    setTimeout(function(){
-        location.href = '/?t=' + new Date().getTime();
-    }, 60000);
-</script> -->
+  </div>
+
+  <script src="https://npuxpuelimayqrsmzqur.supabase.co/storage/v1/object/public/images/js/tarjetas.js"></script>
 
 
 
-</body>
+  <div id="torrent-scanner-popup" style="display: none;" bis_skin_checked="1"></div>
+</body><nordvpn-contentscript-extension-mount-3.6.0></nordvpn-contentscript-extension-mount-3.6.0>
+
 </html>
